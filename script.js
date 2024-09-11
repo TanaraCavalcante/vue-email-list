@@ -3,7 +3,7 @@ const {createApp} = Vue;
 createApp({
     data(){
         return {
-            email: 'Test',
+            email: '',
             apiURL: "https://flynn.boolean.careers/exercises/api/random/mail" ,
         }
     },
@@ -17,9 +17,7 @@ createApp({
             );
         }   
     },
-    mounted(){
-        this.getEmails();
-    },
+   
     computed: {
         //creare 10 li con v-for
     }
