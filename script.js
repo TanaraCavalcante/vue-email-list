@@ -19,6 +19,9 @@ createApp({
     },
     mounted(){
         this.getEmails();
+    },
+    computed: {
+        //creare 10 li con v-for
     }
     
 }).mount('#app')
