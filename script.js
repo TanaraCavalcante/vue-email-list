@@ -3,17 +3,23 @@ const {createApp} = Vue;
 createApp({
     data(){
         return {
-
+            email: 'Test',
+            apiURL: "https://flynn.boolean.careers/exercises/api/random/mail" ,
         }
     },
     methods: {
         getEmails(){
-            axios.get("https://flynn.boolean.careers/exercises/api/random/mail")
+            axios.get(this.apiURL)
             .then((element) => {
-            console.log(element.data.response)
+            this.email = element.data.response;
+            console.log(element.data.response);
             }
-);
+            );
         }   
+    },
+    mounted(){
+        this.getEmails();
     }
+    
 }).mount('#app')
 
